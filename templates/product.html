@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>Про магазин</title>
+{% endblock %}
+
+{% block content %}
+<div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+      <h1 class="display-4 fw-normal">Pricing</h1>
+      <p class="fs-5 text-muted"></p>
+    </div>
+
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+      {% for el in data %}
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">{{ el.title }}</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">{{ el.price }}<small class="text-muted fw-light">p</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>{{ el.text }}</li>
+            </ul>
+            <a href="/buy/{{ el.id }}" class="w-100 btn btn-lg btn-outline-primary">Купить</button>
+            <a href="/product/{{ el.id }}/del" class="btn btn-danger">Удалить</a>
+          </div>
+        </div>
+{% endfor %}
+    </div>
+  <div class="album py-5 bg-light">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="https://goldapple.by/media/catalog/product/cache/fb5d06f7acfb2f26f85333624ccbfb5e/3/5/3542770013004_4_pwij6zdk3tgron3h.jpg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title></img>
+            <div class="card-body">
+              <p class="card-text">
+                Роскошный деревянный бокс 5х30 мл "Континентальная Коллекция". В набор входит 5 ароматов: NUIT A SALZBOURG, BELLE RENCONTRE, ARTI POSITANO, BLEU OIA NOIR TOSCANE.  Верхние ноты: Кокос, Анис, Цветы апельсина. Ноты сердца: Жасмин, Ландыш, Роза. Базовые ноты: Сандал, Белый мускус, Ваниль.ромат раскрывается цветочными нотами розы и жасмина.</p>
+              <div class="d-flex justify-content-between align-items-center"></div>
+            </div>
+          </div>
+      </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="https://goldapple.by/media/catalog/product/cache/fb5d06f7acfb2f26f85333624ccbfb5e/3/4/3439600050226_2_zkqo9xvcqdpskacr.jpg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title></img>
+            <div class="card-body">
+              <p class="card-text">MUGLER Alien — это аромат, обволакивающий, словно кокон, в чувственные ноты белой амбры. Дом MUGLER создал уникальную ноту на все времена. Эта нежная и мягкая нота обволакивает, словно облако «белого мохера». Флакон парфюмерной воды Alien был создан как талисман — заряженный энергией природы.
+              Состав набора: Парфюмерная вода 30мл+Кисть+Лосьон для тела 50мл</p>
+              <div class="d-flex justify-content-between align-items-center">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="https://goldapple.by/media/catalog/product/cache/fb5d06f7acfb2f26f85333624ccbfb5e/3/6/3614272648418_1_y8rbmxe6lma8jszx.jpg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title></img>
+              <div class="card-body">
+              <p class="card-text">Парфюмерная вода Yves Saint Laurent Libre – это чувственный восточный аромат. Композиция раскрывается свежими аккордами мандарина и черной смородины, которые гармонично дополняют петитгрейн и лаванда. В сердце парфюмерной воды от Yves Saint Laurent искрятся ноты жасмина и апельсинового цвета, а в шлейфе нежно звучат сладкая ваниль, утонченный мускус, бархатистый кедр и амбра.
+                </p>
+              </div>
+          </div>
+        </div>
+      </div>
+  {% endblock %}
